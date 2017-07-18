@@ -1,0 +1,129 @@
+//colors
+$col_purpleLight: #a09db1;
+$col_gray: #e8e8e8;
+$col_lightPurpleBorder: #7a768f;
+$col_white: #fff;
+$col_purpleText: #7c7890;
+$col_black: #000;
+$col_purpleDark: #443f5d;
+$font-stack:    Roboto;
+$primary-color: #3f3f3f;
+$font-size-body: 14px;
+$font-size-mobile: 10px;
+$break-small: 480px;
+$padding: 20px;
+$margin: 20px;
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+  font-size: $font-size-body;
+}
+.position-rel{
+  position: relative;
+}
+i.fa-search{
+  color: $col_purpleLight;
+  @extend .position-rel;
+	right:8px;
+}
+	
+.fa-phone, .fa-at, .fa-file-text {
+		@extend .position-rel;
+		right:8px;
+		}
+.fa-at {
+		font-weight: bold;
+	}
+.even {
+	background-color: $col_gray;
+}
+input {
+	width: 400px;
+	padding: $padding/2 $padding/2 $padding/4;;
+	border: none;
+	border-bottom: 1px solid $col_lightPurpleBorder;
+	outline: none;
+	background: transparent;
+	color: $col_white;
+	margin: 0 0 15px $margin/2;
+	font-size: $font-size-body;
+}
+::-webkit-input-placeholder, :-ms-input-placeholder  {
+	color: $col_purpleText;
+}
+.container {
+	padding: 0 15px $padding;
+	border-top: 5px solid $col_black;
+	@extend .position-rel;
+}
+.results{
+  position:absolute;
+  width:100%;
+  border:5px solid $col_purpleDark;
+  margin:-1px 0 0 -20px;
+}
+.emp_result {
+	width: 300px;
+	padding: $padding $padding*2;
+}
+.people_name {
+	padding: $padding/2 0px 0 $padding/4;
+	font-size: 20px;
+	font-weight: bold;
+	margin-bottom:0;
+}
+.people_row {
+	padding: $padding/2 $padding;
+}
+.emp_data {
+	background-color: $col_white;
+}
+.search_input {
+	background-color: $col_purpleDark;
+	padding: $padding/2 $padding $padding/4;
+}
+.flex {
+        display: flex;
+        flex-direction: row;
+    }
+    .result-subtext{
+        flex: 1 1 auto;
+      }
+@media screen and (max-width: $break-small) {
+    .emp_row{
+      padding: $padding/2 $padding/4;
+      font-size:$font-size-mobile;
+    }
+    p.policy-no, .phone_no, .email {
+      padding:$padding*0;
+    }
+  	
+	i.fa-search {
+    left:3px;
+		font-size: $font-size-body;
+	}
+	.fa-phone, .fa-at, .fa-file-text {
+		right: 4px;
+	}
+
+input {
+	    width: 230px;
+    }
+    .search_input{
+      padding: $padding/2 8px $padding/4;
+    }
+    ::-webkit-input-placeholder,:-ms-input-placeholder  {
+    	font-size:$font-size-mobile;
+  }
+ .results{
+   margin-left:-8px;
+ }
+ .flex {
+        display: flex;
+        flex-direction: column;
+    }
+    .result-subtext{
+        flex: 1 1 auto;
+      }
+  }

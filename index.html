@@ -1,0 +1,23 @@
+<!doctype html>
+<html ng-app="peopleSearch">
+	<head>
+		<title>People Search</title>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" /> 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<div ng-controller="peopleController as ec">
+			<search-along on-text-change="ec.peopleSearch(searchKey)"
+					        peoples="ec.peoples"> 
+					        
+			</search-along>
+		</div>
+		<script src="app.js"></script>
+		<script src="peopleCtrl.js"></script>
+		<script src="peopleComponent.js"></script>
+		<script src="peopleService.js"></script>
+	</body>
+</html>
