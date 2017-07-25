@@ -9,9 +9,9 @@
 		<link rel="stylesheet" href="style.css">
 	</head>
 	<body>
-		<div ng-controller="peopleController as ec">
-			<search-along on-text-change="ec.peopleSearch(searchKey)"
-					        peoples="ec.peoples"> 
+		<div ng-controller="peopleController as peoplectrl">
+			<search-along on-text-change="peoplectrl.peopleSearch(searchKey)"
+					        peoples="peoplectrl.peoples"> 
 					        
 			</search-along>
 		</div>
